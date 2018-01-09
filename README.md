@@ -1,6 +1,10 @@
 # ActivityApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3. This project utalizes [Angular 5](https://angular.io/) as well as [Angular Material](https://material.angular.io/) for the front-end framework. The back-end utalizes [Firebase](https://console.firebase.google.com) database as well as Firebase hosting. 
+
+For more information on the back-end data, please see 'Data structure' below.
+
+The hosted app can be found [here](https://activity-app-ocas.firebaseapp.com/)
 
 ## Development server
 
