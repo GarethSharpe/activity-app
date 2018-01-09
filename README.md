@@ -12,4 +12,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Data structure
 
-[activity data](https://screenshots.firefox.com/uIajny52nzTLpbiM/console.firebase.google.com)
+[database data structure](https://screenshots.firefox.com/uIajny52nzTLpbiM/console.firebase.google.com)
+[activity data structure](https://screenshots.firefox.com/qvTr9Mk6OAb4t8q8/console.firebase.google.com)
+[activity comment(s) data strucutre](https://screenshots.firefox.com/NQGTr4KZRHAcNGdE/console.firebase.google.com)
+[activity member(s) data structure](https://screenshots.firefox.com/eoAG4qd7vG4Emxr7/console.firebase.google.com)
