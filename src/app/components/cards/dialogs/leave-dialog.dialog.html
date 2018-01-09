@@ -1,0 +1,20 @@
+<form class="form">
+  <h1 mat-dialog-title>Abandon Activity</h1>
+  <table class="full-width" cellspacing="5"><tr>
+    <td><mat-form-field class="full-width">
+      <input matInput placeholder="First name" [(ngModel)]="data.first" name="first">
+    </mat-form-field></td>
+    <td><mat-form-field class="full-width">
+      <input matInput placeholder="Last name" [(ngModel)]="data.last" name="last">
+    </mat-form-field></td>
+  </tr></table>
+
+  <table class="full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="full-width">
+      <input type="email" matInput placeholder="Email" [(ngModel)]="data.email" name="email">
+    </mat-form-field></td>
+  </tr></table>
+
+  <button mat-raised-button color="accent" (click)='leaveActivity(data)'>Leave</button>
+  <button mat-raised-button color="accent" (click)='cancel()'>Cancel</button>
+</form>

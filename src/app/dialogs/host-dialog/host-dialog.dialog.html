@@ -1,0 +1,71 @@
+<form class="form">
+  <h1 mat-dialog-title>Activity Setup</h1>
+  <table class="full-width" cellspacing="5"><tr>
+    <td><mat-form-field class="full-width">
+      <input matInput placeholder="First name" [(ngModel)]="data.hostFirst" name="hostFirst">
+    </mat-form-field></td>
+    <td><mat-form-field class="full-width">
+      <input matInput placeholder="Last name" [(ngModel)]="data.hostLast" name="hostLast">
+    </mat-form-field></td>
+  </tr></table>
+
+  <table class="full-width" cellspacing="5"><tr>
+    <td><mat-form-field class="full-width">
+      <input type="email" matInput placeholder="Email" [(ngModel)]="data.hostEmail" name="hostEmail">
+    </mat-form-field></td>
+    <td><mat-form-field class="full-width">
+      <span matPrefix>+1 &nbsp;</span>
+      <input type="tel" matInput placeholder="Phone" [(ngModel)]="data.hostPhone" name="hostPhone">
+    </mat-form-field></td>
+  </tr></table>
+
+  <table class="full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="full-width">
+    <input matInput placeholder="Activity address" [(ngModel)]="data.address" name="address">
+    </mat-form-field></td>
+    <td><mat-form-field class="full-width">
+      <input matInput placeholder="Activity city" [(ngModel)]="data.city" name="city">
+    </mat-form-field></td>
+    <td><mat-form-field class="full-width">
+      <input matInput placeholder="Activity province" [(ngModel)]="data.province" name="province">
+    </mat-form-field></td>
+  </tr></table>
+
+  <table class="full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="full-width">
+      <input matInput placeholder="Activity Name" [(ngModel)]="data.title" name="title">
+    </mat-form-field></td>
+    <td><mat-form-field class="full-width">
+      <span matPrefix>$ &nbsp;</span>
+      <input matInput placeholder="Cost" [(ngModel)]="data.cost" value="0.00" name="cost">
+      <mat-hint align="end">$x.xx</mat-hint>
+    </mat-form-field></td>
+  </tr></table>
+
+  <table class="full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="full-width">
+      <mat-select placeholder="Activity genre" [(ngModel)]="data.genre" name="genre">
+      <mat-option *ngFor="let genre of genres" [value]="genre">{{genre}}</mat-option>
+      </mat-select>
+    </mat-form-field></td>
+    <td><mat-form-field class="full-width">
+    <input matInput [min]="minDate" [matDatepicker]="picker" placeholder="Pick a date" [(ngModel)]="data.date" name="date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field></td>
+    <td><mat-form-field class="full-width">
+      <input matInput placeholder="Choose a time" [(ngModel)]="data.time" name="time">
+    </mat-form-field></td>
+  </tr></table>
+
+  <mat-form-field class='full-width'>
+    <textarea matInput #message maxlength="256" placeholder="Activity description"
+    matTextareaAutosize matAutosizeMaxRows="10"
+    [(ngModel)]="data.description" name="description"></textarea> 
+    <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+  </mat-form-field>
+
+  <button mat-raised-button color="accent" (click)='hostActivity(data)'>Host activity</button>
+  <button mat-raised-button color="accent" (click)='cancelActivity()'>Cancel activity</button>
+
+</form>

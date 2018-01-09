@@ -1,0 +1,9 @@
+.full-width {
+  width: 100%;
+}
+
+.static-map {
+	width: 100%;
+	height: 50%;
+	float: right;
+}

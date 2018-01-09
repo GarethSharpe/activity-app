@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>{{data.activity.title}} Details</h1>
+<div mat-dialog-content>
+	<table class="full-width" cellspacing="0"><tr>
+		<td>
+			<h3>Host:</h3>
+			<p>{{data.activity.hostFirst}} {{data.activity.hostLast}} <br> {{data.activity.hostEmail}}</p>
+
+			<h3>Where we will meet:</h3>
+			<p>{{data.activity.address}} {{data.activity.city}}, {{data.activity.province}}</p>
+
+			<h3>When we will start:</h3>
+			<p>{{data.activity.date}} @ {{data.activity.time}}</p>
+
+			<h3>How much money to bring:</h3>
+			<p>${{data.activity.cost}}</p>
+		</td>
+		<td>
+			<img class="static-map" src="{{data.activity.src}}" alt='Location'>
+		</td>
+  </tr></table>
+
+  <table class="full-width" cellspacing="0"><tr>
+		<td>
+  		<h3>What we will be doing:</h3>
+			<p>{{data.activity.description}}</p>
+		</td>
+	</tr></table>
+
+	<table class="full-width" cellspacing="0"><tr>
+	</tr></table>
+</div>

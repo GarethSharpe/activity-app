@@ -1,0 +1,29 @@
+<form class="form">
+  <h1 mat-dialog-title>Activity Sign-Up</h1>
+  <table class="full-width" cellspacing="5"><tr>
+    <td><mat-form-field class="full-width">
+      <input matInput placeholder="First name" [(ngModel)]="data.memberFirst" name="memberFirst">
+    </mat-form-field></td>
+    <td><mat-form-field class="full-width">
+      <input matInput placeholder="Last name" [(ngModel)]="data.memberLast" name="memberLast">
+    </mat-form-field></td>
+  </tr></table>
+
+  <table class="full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="full-width">
+      <input type="email" matInput placeholder="Email" [(ngModel)]="data.memberEmail" name="memberEmail">
+    </mat-form-field></td>
+  </tr></table>
+
+  <table class="full-width" cellspacing="5"><tr>
+    <mat-form-field class='full-width'>
+	    <textarea matInput #message maxlength="60" placeholder="Leave a comment"
+	    matTextareaAutosize matAutosizeMaxRows="3" [(ngModel)]="data.memberComment" name="memberComment">
+	    </textarea> 
+	    <mat-hint align="end">{{message.value.length}} / 60</mat-hint>
+	  </mat-form-field>
+  </tr></table>
+
+  <button mat-raised-button color="accent" (click)='joinActivity(data)'>Join</button>
+  <button mat-raised-button color="accent" (click)='cancel()'>Cancel</button>
+</form>

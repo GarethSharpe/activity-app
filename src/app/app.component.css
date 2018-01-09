@@ -1,0 +1,10 @@
+.banner {
+	padding-top: 1.5em;
+	padding-left: 10em;
+}
+
+.search,
+.cards {
+	padding-left: 10em;
+	padding-right: 10em;
+}
